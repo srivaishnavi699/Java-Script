@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events with Color Change</title>
+    <style>
+        #div {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(23, 161, 215);
+            border: 2px solid black;
+            cursor: pointer;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        
+    </div></br>
+   <!-- <input type="text" id="input" placeholder="Type something here...."></br></br>
+    <input type="reset" id="reset" value="reset"> 
+    <input type="submit" id="submit" value="submit">-->
+    <input type="text" id="input" placeholder="Type something here...."><!--button doesn't support type and placeholder-->
+    <button id="reset">Reset</button>
+    <button id="submit">Submit</button>
+    <script>
+        let a = document.getElementById("input");
+        let b=document.getElementById("reset");
+        let c = document.getElementById("submit");
+        b.addEventListener("click", function () {
+            a.value = "";
+        });
+        c.addEventListener("click",function(event){
+            event.preventDefault();
+            alert("Form submittes with values: "+a.value);
+        });
+        
+/*        let a = document.getElementById("div");
+
+        a.addEventListener("mouseover", function () {
+            a.innerHTML = "<h3>Mouse Over Div</h3>";
+            a.style.backgroundColor = "green";
+        });
+
+        a.addEventListener("mouseout", function () {
+            a.innerHTML = "<h3>Mouse Out of Div</h3>";
+            a.style.backgroundColor = "blue";
+        });
+        a.addEventListener("mouseup", function () {
+            a.innerHTML = "<h3>Mouse up on Div</h3>";
+            a.style.backgroundColor = "green";
+            a.style.borderRadius="55px";
+        });
+
+        a.addEventListener("mousedown", function () {
+            a.innerHTML = "<h3>Mouse down of Div</h3>";
+            a.style.backgroundColor = "blue";
+        });*/
+    </script>
+</body>
+</html>

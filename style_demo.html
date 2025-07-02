@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+       background-color:green;
+        color: yellow;
+       }
+    </style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Demo</title>
+</head>
+<body>
+    <h1>Welcome to style demo</h1>
+    <br>
+    <p>This is a paragraph demonstrating the styles applied to this document.</p>
+
+    <button onclick="f()">Click Me</button>
+    <button onclick="document.body.style.backgroundColor = 'black';">Change Background Color</button>
+
+    <script>
+        function f() {
+            // Toggle background color
+           /* if (document.body.style.backgroundColor === "red") {
+                document.body.style.backgroundColor = "blue";
+            } else {
+                document.body.style.backgroundColor = "red";
+            }
+        } */
+        let a= document.body.style.backgroundColor;
+        setInterval(() => {
+            document.body.style.backgroundColor =document.body.style.backgroundColor === 
+            "red" ? "blue" : "red";}, 100);
+        
+        
+       // a=a=="red"?"blue":"red";
+        //document.body.style.backgroundColor=a;
+        }
+       function g(){
+    let a = ["red", "blue", "green", "yellow"];
+    let i = 0;
+    setInterval(() => {
+        document.body.style.background = a[i];
+        i = (i + 1) % a.length;
+    }, 1000);
+}
+    </script>
+    <button onclick="g()">Start Background Color Cycle</button>
+
+
+
+   
+</body>
+</html> 

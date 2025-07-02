@@ -6,6 +6,7 @@ if(age >= 18) {
 } else {
     console.log("you are exactly 18 years old.");
 }
+console.log("-----------------------------------------------------------")
 
 //why javascript is used?
 // JavaScript is used for web development to create interactive and dynamic web pages. It allows developers to implement complex features on web pages, such as animations, form validation, and real-time updates without requiring a page reload. Additionally, JavaScript can be used for server-side development (Node.js), mobile app development (React Native), and even desktop applications (Electron).
@@ -33,3 +34,76 @@ if(age >= 18) {
 // JavaScript is also used for client-side scripting, allowing developers to handle user events, such as clicks and keyboard inputs, directly in the browser. This reduces server load and improves performance by allowing certain tasks to be handled on the client side.
 // Additionally, JavaScript can be used for server-side development with environments like Node.js, enabling developers to use the same language for both client-side and server-side code. This unification simplifies development processes and allows for the sharing of code between the client and server.
 // Its extensive ecosystem of libraries and frameworks, such as React, Angular, and Vue.js, further enhances its capabilities and makes it a popular choice among developers.
+
+//for loop
+for(let i = 0; i < 5; i++) {
+    console.log("This is loop iteration number: " + i);
+    i++
+}
+console.log("-----------------------------------------------------------")
+
+//while loop 
+let j=0;
+while (j<5){
+    console.log("while loop iteration number: " + j);
+    j++
+}
+console.log("-----------------------------------------------------------")
+
+//do while
+let k=0;
+do {
+    console.log("do-while loop iteration number: " + k);
+    k++;
+}while (k < 5);
+console.log("-----------------------------------------------------------")
+
+//for of loop and for in loop
+let arr=[10,20,30,40,50];
+for( let value of arr){
+    console.log("Array value: " + value);
+}
+console.log("-----------------------------------------------------------")
+
+// for in loop
+let obj={a:1, b: 2, c: 3};//key: value 
+for(let key in obj){
+    console.log("Object key: " + key + ", Value: " + obj[key]);
+}
+console.log("-----------------------------------------------------------")
+
+//for each loop
+arr.forEach((value,index) => {
+    console.log("foreach loop - Index: " + index + ", Value: " + value);
+});
+console.log("-----------------------------------------------------------")
+
+//switch case
+let day="Sunday"; // Change this value to test different cases
+switch(day) {
+    case "Monday":
+        console.log("It's monday");
+        break;
+    case "Tuesday":
+        console.log("It's Tuesday");
+        break;
+    case "Wednesday":
+        console.log("It's wednesday");
+        break;
+    case "Thursday":
+        console.log("it's Thursday!");
+        break;
+    case "Friday":
+        console.log("It's Friday");
+        break;
+    case "Saturday":
+        console.log("It's Saturday");
+        break;
+    case "Sunday":
+        console.log("It's Sunday");
+        break;
+    default:
+        console.log("Not a valid day of the week.");
+}
+console.log("-----------------------------------------------------------")
+

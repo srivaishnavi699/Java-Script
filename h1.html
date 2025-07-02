@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="greeting">Hi there !</p>
+    <h1 class="hi">This is the heading tag</h1>
+    <p class="hi">malla reddy</p>
+    <p class="aa">Hi I am</p>
+    <h2>hello this is h2 tag</h2>
+    <h2>this is second h2 tag</h2>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    
+    <button onclick="f()">Click me</button>
+    <script>
+        //change the document title
+        document.title="Hello world";
+        function f(){
+            const name=document.getElementById('nameInput').value; //element by id name
+            document.getElementsByClassName("hi")[0].innerText= `hello, ${name}!`;//element by class name
+            document.getElementsByClassName("hi")[1].innerHTML=  `hello, ${name}!`;           
+            document.getElementsByClassName("aa")[0].innerHTML="hi, " + name;
+            document.getElementsByTagName("h2")[0].innerText="how " + name + "?";
+            document.getElementsByTagName("h2")[1].innerText="how " + name + "?";
+            document.title="hello "+ name+ "(❁´◡`❁)";
+            document.getElementById("greeting").innerText="hello " + name+ "🙌";//innerText='hello,${name}!';
+            
+            const newHeading = document.createElement("h3");  //create a new h3 element
+            newHeading.innerText = "Welcome, " + name + "!";  //set the innerText of the new h3 element
+            document.body.appendChild(newHeading);  //append the new h3 element to the body of the document
+            //we can also use innerHTML to change the content of an element
+            
+        
+        }
+        
+
+        
+        //we can use innerHTMl or innerText to change the content of an element
+        //this will change the content of the paragraph with the id="greeting"
+    </script>
+</body>
+</html>

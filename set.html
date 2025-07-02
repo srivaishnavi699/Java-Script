@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            background-color: blue;
+            padding: 20px;
+            margin: 20px;
+        }
+        .container2{
+            background-color: rgb(29, 132, 184);
+            padding: 20px;
+            margin: 20px;
+        }
+         .container3{
+            background-color: rgb(37, 176, 2);
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>heading1</h1>
+        <p>paragraph 1</p>
+    </div>
+    <!--<a href="https://www.google.com">Google</a>-->
+    <button >click me</button>
+    <div class="container2">
+        <h1>heading1</h1>
+        <p>paragraph 1</p>
+    </div>
+    
+    </div>
+    <button onclick="f()">click me</button>
+    <script>
+        function f(){
+       /* let a=document.getElementsByTagName('a');
+        a[0].setAttribute('href','https://www.amazon.com');*/
+
+
+
+        const c=document.querySelectorAll('.container2');
+        c.forEach(element=>{
+            element.setAttribute('class','container3');
+        });
+
+        }
+    </script>
+</body>
+</html>

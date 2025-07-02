@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>/*
+           #container {
+                background-color: rgb(65, 148, 220);
+                height: 300px;
+                width: 300px;
+            }
+            #body {
+                background-color: blue;
+                height: 500px;
+                width: 500px;
+            }*/
+        </style>
+</head>
+<body>
+    <div id="container" >
+        <!-- tabindex="0" allows the div to receive focus tabindex="0" -->
+    </div>
+    <input type="text" id="colorInput" placeholder="e.g., red, blue, cyan">
+    
+  <script>/*
+        document.body.addEventListener("keyup", function(event) {
+          document.body.style.backgroundColor = "red"; 
+        });
+        document.body.addEventListener("keydown", function(event) {
+          document.body.style.backgroundColor = "blue"; 
+        });
+        document.getElementById("container").addEventListener("keyup", function(event) {
+            document.getElementById("container").style.backgroundColor = "green"; 
+        });
+
+document.body.addEventListener("keypress",function(event){
+    document.body.style.backgroundColor="green";
+    document.body.style.color="yellow";
+});
+document.body.addEventListener("keypress",function(event) {
+                document.getElementById("container").innerHTML += event.key ; 
+                alert(event.key); // Display the key pressed
+                alert(event.code); // Display the code of the key pressed 
+                });
+document.body.addEventListener("keypress", function(event) {
+    document.getElementById("container").innerHTML += event.code + " ";
+});
+//add event listener for functional keys
+    document.body.addEventListener("keydown",f);
+    document.body.addEventListener("keydown",g);
+    function f() {
+        document.body.style.backgroundColor = "red"; 
+    }
+    function g() {
+        alert("hello world");
+    }
+document.body.addEventListener("keydown", function(event) {
+    if (event.code === "Enter") {
+      alert(event.key);
+    } else {
+      document.getElementById("container").innerHTML += event.code + "<br>";
+    }
+  });
+document.body.addEventListener("keydown", function(event) {
+            const key = event.key.toLowerCase();
+            const colorMap = {
+    a: "aqua",
+    b: "blue",
+    c: "coral",
+    d: "darkcyan",
+    e: "darkorange",
+    f: "darkred",
+    g: "gold",
+    h: "hotpink",
+    i: "indigo",
+    j: "lightgreen",
+    k: "lightblue",
+    l: "lightcoral",
+    m: "magenta",
+    n: "navy",
+    o: "olive",
+    p: "purple",
+    q: "red",
+    r: "silver",
+    s: "teal",
+    t: "tomato",
+    u: "violet",
+    v: "yellowgreen",
+    w: "wheat",
+    x: "yellow",
+    y: "pink",
+    z: "white"
+            };
+
+            if (colorMap[key]) {
+                document.body.style.backgroundColor = colorMap[key];
+                document.getElementById("container").innerHTML = `You pressed "${key.toUpperCase()}" - ${colorMap[key]}`;
+            } else {
+                document.getElementById("container").innerHTML = `You pressed "${key.toUpperCase()}", no color mapped.`;
+            }
+        }); */
+         const input = document.getElementById("colorInput");
+
+        input.addEventListener("input", function() {
+            const color = input.value.trim().toLowerCase();
+            document.body.style.backgroundColor = color;
+        });
+
+
+    </script>
+</body>
+</html>

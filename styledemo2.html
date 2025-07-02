@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome to style demo 2</h1>
+  <p>This is a paragraph demonstrating the styles applied to this document.</p>
+
+  <button onclick="g()">Click Me</button>
+
+  <div class="division-block"> <!-- for hiding the data -->
+    <h1>Heading of Division Tag</h1>
+    <p>This is a paragraph inside the division block.</p>
+  </div>
+
+  <div class="effect">
+    <h1>MRCET</h1>
+    <p>ARTIFICIAL INTELLIGENCE</p>
+  </div>
+
+  <button onclick="effect()">Apply Effect</button>
+  <button onclick="diss()">Toggle Division Block</button>
+
+  <script>
+    function g() {
+      let a = ["red", "blue", "green", "yellow"];
+      let i = 0;
+      setInterval(() => {
+        document.body.style.backgroundColor = a[i];
+        i = (i + 1) % a.length;
+      }, 1000);
+    }
+
+    function diss() {
+      let div = document.querySelector('.division-block');
+      if (div.style.display === 'none') {
+        div.style.display = 'block';
+      } else {
+        div.style.display = 'none';
+      }
+    }
+
+    function effect() {
+      let elements = document.querySelectorAll('.effect *');
+      elements.forEach((p) => {
+        p.style.backgroundColor = 'yellow';
+        p.style.color = 'blue';
+        p.style.fontSize = '20px';
+        p.style.fontWeight = 'bold';
+        p.style.border = '2px solid black';
+        p.style.padding = '10px';
+        p.style.textAlign = 'center';
+      });
+    }
+  </script>
+</body>
+</html>

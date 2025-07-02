@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="querySelectorAll heading1">
+    <h1>heading 1</h1>
+    <p>this is para in the queryselectorall</p>
+  </div>
+  <div class="querySelectorAll heading2">
+    <h1>heading 2</h1>
+    <p>this is para in the queryselectorall</p>
+  </div>
+  <div class="querySelectorAll heading3">
+    <h1>heading 3</h1>
+    <p>this is para in the queryselectorall</p>
+  </div>
+ 
+
+  <button onclick="f()">click me</button>
+
+<div class="division-block"> <!--for hiding the data-->
+  <h1>heading of division tag</h1>
+  <p>paragraph of division block</p>
+</div>
+  <button onclick="diss()">click me </button>
+  <div class="tutorial">
+    <h1>MRCET</h1>
+    <p>this is MRCET college</p>
+  </div>
+   <button onclick="effect()">Apply Effect</button>
+  <script>
+  
+    function f() {
+      // 1. Select all elements with the class 'querySelectorAll'
+      const elements = document.querySelectorAll(".querySelectorAll");
+
+      // 2. Loop through each element
+      elements.forEach((element) => {
+        // Create and append a new heading
+        const newHeading = document.createElement("h2");
+        newHeading.innerText = "This is a new heading";
+        element.appendChild(newHeading);
+
+        // Create and append a new paragraph
+        const newParagraph = document.createElement("p");
+        newParagraph.innerText = "This is a new paragraph";
+        element.appendChild(newParagraph);
+      });
+
+      // 3. Remove the first .container if it exists
+      const firstContainer = document.querySelector(".container");
+      if (firstContainer) {
+        firstContainer.parentNode.removeChild(firstContainer);
+      }
+
+      // 4. Insert a new heading at the top of the body
+      const newHeadingTop = document.createElement("h1");
+      newHeadingTop.innerText = "New Heading";
+      document.body.insertBefore(newHeadingTop, document.body.firstChild);
+    }
+    
+    (proper)
+
+    function diss(){
+      let div=document.querySelector('.division-block');
+      if(div.style.display=='none'){
+        div.style.display='block';
+      }
+      else{
+        div.style.display='none';
+      }
+      }
+      function effect(){
+        let p=document.querySelector('tutorial');
+        p.style.backgroundColor='purple';
+        p.style.color='while';
+        p.style.fontSize='20px';
+        p.style.fontWeight='bold';
+        p.style.padding='10px';
+        p.style.textAlign='center';
+      }
+    
+  </script>
+</body>
+</html>
